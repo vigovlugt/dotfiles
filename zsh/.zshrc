@@ -103,9 +103,9 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f "/home/vigo/.ghcup/env" ] && source "/home/vigo/.ghcup/env" # ghcup-env
 
-eval "$(zoxide init zsh)"
+export PATH=~/programs/civic/bin/:~/.local/bin:$PATH
 
-export PATH=/home/vigo/programs/civic/bin/:$PATH
+eval "$(zoxide init zsh)"
 
 alias ls="exa --group-directories-first"
 alias cd="z"
