@@ -1,6 +1,7 @@
-if [ "$TERM_PROGRAM" == "vscode" ]; then
-else
-    if [ "$TMUX" = "" ]; then tmux; fi
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  if command -v tmux &> /dev/null; then
+    tmux attach-session -t mysession || tmux new-session -s mysession
+  fi
 fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
