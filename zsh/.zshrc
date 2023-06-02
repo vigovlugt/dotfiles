@@ -1,4 +1,7 @@
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TERM_PROGRAM" == "vscode" ]; then
+else
+    if [ "$TMUX" = "" ]; then tmux; fi
+fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -115,3 +118,4 @@ alias vi="nvim"
 alias vim="nvim"
 alias t="tmux"
 alias g="git"
+
